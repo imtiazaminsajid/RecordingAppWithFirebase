@@ -16,10 +16,13 @@
         android:text="Tap or Hold Button to Record"
         android:layout_gravity="center"
         android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:background="#000"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/recordLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
