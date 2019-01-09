@@ -2,12 +2,16 @@ package com.example.ambit.recordingappwithfirebase;
 
 import android.media.MediaRecorder;
 import android.os.Environment;
+import android.os.storage.StorageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,16 +24,18 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = "Record_log";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         mRecordBtn = findViewById(R.id.recordBtn);
         mRecordLabel = findViewById(R.id.recordLabel);
 
         mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
-        mFileName += "/recoder_audio.3gp";
+        mFileName += "/recoded_audio.mp3";
 
         mRecordBtn.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -53,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private void startRecording() {
         mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT);
         mRecorder.setOutputFile(mFileName);
         mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
@@ -70,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
         mRecorder.stop();
         mRecorder.release();
         mRecorder = null;
+
+        uploadAudio();
+    }
+
+    private void uploadAudio() {
+
     }
 
 }

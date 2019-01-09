@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "317298169790",
+    "firebase_url": "https://recorder-73196.firebaseio.com",
+    "project_id": "recorder-73196",
+    "storage_bucket": "recorder-73196.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317298169790:android:7b6eab8bf3afbfbf",
+        "android_client_info": {
+          "package_name": "com.example.ambit.recordingappwithfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317298169790-rpbna7c5pd5rq2t9l9ccapa198k3cb19.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ambit.recordingappwithfirebase",
+            "certificate_hash": "eac7d1166b620fa0ff086bea35e3f38b744312b1"
+          }
+        },
+        {
+          "client_id": "317298169790-rs65acit6q0uiaamigpboeud9alket7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi37xwrQ1IF93di3gIlDGgZGvw_OMA7eo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317298169790-rs65acit6q0uiaamigpboeud9alket7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
